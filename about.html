@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Honda Hub Resale • About</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  :root{ --black:#0b0b0c; --red:#d71c24; }
+  body{ background:#0e0e11 url('img/civic-type-r-blue.jpg') center/cover fixed; }
+  .veil{ background:rgba(10,10,11,.85); }
+  header.hero, main{ margin-top:72px; }
+  .topbar{ background:var(--black)!important; color:#fff; border-bottom:3px solid var(--red); }
+  .brand{ font-weight:700; }
+  .panel{ background:rgba(22,23,26,.96); color:#e9e9ee; border:1px solid #2a2c31; }
+</style>
+</head>
+<body class="veil">
+
+<!-- NAV -->
+<div class="w3-top">
+  <div class="w3-bar topbar w3-card">
+    <a href="index.html" class="w3-bar-item w3-button brand">Honda Hub Resale</a>
+    <a href="about.html"   class="w3-bar-item w3-button w3-hide-small w3-hide-medium">About</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Gallery</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium">Contact</a>
+    <a class="w3-bar-item w3-button w3-right w3-hide-large" onclick="toggleMobileNav(this)">☰</a>
+  </div>
+  <div id="mobileNav" class="w3-bar-block w3-hide w3-hide-large" style="background:#2b2b2f;color:#fff;border-top:2px solid #d71c24;">
+    <a href="about.html"   class="w3-bar-item w3-button">About</a>
+    <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+<header class="w3-container hero w3-padding-32" style="color:#fff">
+  <h2 style="font-weight:800;text-shadow:2px 2px 4px #000">About the Marketplace</h2>
+  <p style="color:#e6e6e6;text-shadow:1px 1px 2px #000">Built by Honda enthusiasts to help other enthusiasts buy and sell with confidence.</p>
+</header>
+
+<main class="w3-content" style="max-width:1100px">
+  <section class="w3-row-padding">
+    <div class="w3-col s12 m6">
+      <div class="w3-card panel w3-padding">
+        <h3>What we list</h3>
+        <ul class="w3-ul" style="background:transparent">
+          <li>2017–2024 Civic Type R (FK8 & FL5)</li>
+          <li>10th & 11th-gen Civic Si</li>
+          <li>11th-gen Accord (incl. Hybrid)</li>
+          <li>6th-gen CR-V trims</li>
+        </ul>
+      </div>
+    </div>
+    <div class="w3-col s12 m6">
+      <div class="w3-card panel w3-padding">
+        <h3>How it works</h3>
+        <ol class="w3-ol">
+          <li>Sellers submit full details & service records.</li>
+          <li>We screen for quality and accuracy.</li>
+          <li>Listings go live with clean photos & spec sheets.</li>
+          <li>Buyers connect directly with sellers.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="w3-center w3-padding-32" style="color:#cfd2da">
+  <p>© 2025 Honda Hub Resale</p>
+</footer>
+
+<script>
+  function toggleMobileNav(btn){
+    const m=document.getElementById('mobileNav');
+    const open=m.className.indexOf('w3-show')!==-1;
+    if(!open){ m.className+=' w3-show'; btn&&btn.setAttribute('aria-expanded','true'); }
+    else{ m.className=m.className.replace(' w3-show',''); btn&&btn.setAttribute('aria-expanded','false'); }
+  }
+</script>
+</body>
+</html>
